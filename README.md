@@ -44,7 +44,6 @@ By default a Dark and Light theme based off of the [Gnome Adwaita color palette]
     <h3>Light Mode on Kde Plasma</h3>
     <img alt="Light Mode on KDE Plasma" src="./assets/standard_light.png">
 </div>
-
 </details>
 
 ## Usage
@@ -53,7 +52,7 @@ Simple to use, let's implement the [Gruvbox Dark](https://github.com/morhetz/gru
 color scheme really quickly.
 
 <details>
-<summary>Code</summary>
+<summary>Code Example</summary>
 <br>
 
 ```rust
@@ -237,6 +236,8 @@ impl eframe::App for MyApp {
     }
 }
 ```
+
+Here is the library used in a [dashboard template from the above screen shots](https://github.com/thebashpotato/egui-dashboard-template)
 
 </details>
 
