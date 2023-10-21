@@ -38,8 +38,10 @@ By default a Dark and Light theme based off of the [Gnome Adwaita color palette]
 <br>
 
 <div align="center">
+    <h3>Dark Mode on Kde Plasma</h3>
     <img alt="Dark Mode on KDE Plasma" src="./assets/standard_dark.png">
     <br>
+    <h3>Light Mode on Kde Plasma</h3>
     <img alt="Light Mode on KDE Plasma" src="./assets/standard_light.png">
 </div>
 
