@@ -1,10 +1,15 @@
 [package]
 name = "egui-aesthetix"
 version = "0.1.0"
+authors = ["Matt Williams <matt.k.williams@protonmail.com>"]
 description = "A Uniform and programmatic approach to theming Egui applications"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+homepage = "https://github.com/thebashpotato/egui-aesthetix"
+repository = "https://github.com/thebashpotato/egui-aesthetix"
+documentation = "https://docs.rs/egui-aesthetix/"
+keywords = ["egui", "theming"]
+categories = ["gui"]
+license-file = "LICENSE"
 
 [dependencies]
 egui = "0.23.0"
@@ -12,3 +17,15 @@ egui = "0.23.0"
 [lib]
 name = "egui_aesthetix"
 path = "src/lib.rs"
+
+[profile.release]
+codegen-units = 1
+incremental = false
+strip = true        # Automatically strip symbols from the binary.
+opt-level = "z"     # Optimize for size.
+lto = true          # optimize at the linking stage
+panic = "abort"     # don't unwind the stack on panic
+
+[profile.bench]
+codegen-units = 1
+incremental = false
