@@ -31,15 +31,17 @@ cargo add egui-aesthetix
 This library is my answer to theming egui. There are other libraries, and approaches. I like this method because it is trait based,
 so many themes could be added to this crate for everyone to use.
 
-By default a Dark and Light theme based off of the [Gnome Adwaita color pallette](https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1-latest/named-colors.html) ships with the library. It should look pretty good on Windows, Mac and obviously Linux.
+By default a Dark and Light theme based off of the [Gnome Adwaita color palette](https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1-latest/named-colors.html) ships with the library. It should look pretty good on Windows, Mac and obviously Linux.
 
 <details>
 <summary>Screen Shots</summary>
 <br>
 
-[Dark Mode](./assets/standard_dark.png)
-
-[Light Mode](./assets/standard_light.png)
+<div align="center">
+    <img alt="Dark Mode on KDE Plasma" src="./assets/standard_dark.png">
+    <br>
+    <img alt="Light Mode on KDE Plasma" src="./assets/standard_light.png">
+</div>
 
 </details>
 
