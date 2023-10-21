@@ -237,9 +237,9 @@ impl eframe::App for MyApp {
 }
 ```
 
-Here is the library used in a [dashboard template from the above screen shots](https://github.com/thebashpotato/egui-dashboard-template)
-
 </details>
+
+Here is the library used in a [dashboard template from the above screen shots](https://github.com/thebashpotato/egui-dashboard-template)
 
 ## Maintainers
 
