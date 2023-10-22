@@ -1,6 +1,6 @@
 [package]
 name = "egui-aesthetix"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Matt Williams <matt.k.williams@protonmail.com>"]
 description = "A Uniform and programmatic approach to theming Egui applications"
 edition = "2021"
@@ -10,6 +10,12 @@ documentation = "https://docs.rs/egui-aesthetix/"
 keywords = ["egui", "theming"]
 categories = ["gui"]
 license-file = "LICENSE"
+
+[features]
+default = ["standard"]
+all_themes = ["standard", "carl"]
+standard = []
+carl = []
 
 [dependencies]
 egui = "0.23.0"

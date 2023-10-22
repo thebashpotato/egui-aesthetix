@@ -3,7 +3,7 @@
 
 use crate::Aesthetix;
 
-/// Standard light theme that is based of the Gnome projects libadwaita theme.
+/// Standard dark theme, with rounded buttons, and ample margin.
 pub struct StandardLight;
 
 impl Aesthetix for StandardLight {

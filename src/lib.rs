@@ -68,6 +68,7 @@
 // clipp ALLOW level hints
 #![allow(clippy::excessive_precision, clippy::module_name_repetitions)]
 
+#[cfg(feature = "default")]
 pub mod themes;
 
 /// Every custom egui theme that wishes to use the egui-aesthetix crate must implement this trait.
