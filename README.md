@@ -51,6 +51,8 @@ I like this method because it is trait based, so many themes could be added to t
 4. Catppuccin (All versions)
     - TODO
 
+### Checkout the results
+
 <details>
 <summary>Screen Shots</summary>
 <br>
