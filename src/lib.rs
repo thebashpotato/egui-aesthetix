@@ -65,11 +65,13 @@
     clippy::unseparated_literal_suffix,
     clippy::verbose_file_reads
 )]
-// clipp ALLOW level hints
+// clippy ALLOW level hints
 #![allow(clippy::excessive_precision, clippy::module_name_repetitions)]
 
 #[cfg(feature = "default")]
 pub mod themes;
+
+use egui::style::ScrollStyle;
 
 /// Every custom egui theme that wishes to use the egui-aesthetix crate must implement this trait.
 /// Aesthetix is structured in such a way that it is easy to customize the theme to your liking.
@@ -201,10 +203,14 @@ pub trait Aesthetix {
             tooltip_width: 600.0,
             indent_ends_with_horizontal_line: false,
             combo_height: 200.0,
-            scroll_bar_width: self.scroll_bar_width_style(),
-            scroll_handle_min_length: 12.0,
-            scroll_bar_inner_margin: 4.0,
-            scroll_bar_outer_margin: 0.0,
+	    scroll: ScrollStyle {
+                bar_width: self.scroll_bar_width_style(),
+                handle_min_length: 12.0,
+                bar_inner_margin: 4.0,
+                bar_outer_margin: 0.0,
+                ..Default::default()
+            },
+            ..Default::default()
         }
     }
 
