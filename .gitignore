@@ -14,6 +14,7 @@ Cargo.lock
 *.pdb
 
 .vscode/
+.idea/
 
 
 # Added by cargo

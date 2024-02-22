@@ -1,4 +1,4 @@
-//! All themes that the Aesthetix ships with out of the box will
+//! All themes that the Aesthetix ships without of the box will
 //! be located in this folder
 
 mod carl;

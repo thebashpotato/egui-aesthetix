@@ -26,7 +26,7 @@ I like this method because it is trait based, so many themes could be added to t
 
 ### Default themes
 
-> The library ships with the following themes if deafault features are left on.
+> The library ships with the following themes if default features are left on.
 > These should look great on Mac, Windows and Linux alike.
 
 1. Standard Dark
@@ -100,7 +100,7 @@ egui-aesthetix = { version = "0.2.0", features = ["standard", "carl" ] }
 
 ## Usage
 
-Here is the [dashboard template from the above screen shots](https://github.com/thebashpotato/egui-dashboard-template) using this crate for its themes. The code is
+Here is the [dashboard template from the above screenshots](https://github.com/thebashpotato/egui-dashboard-template) using this crate for its themes. The code is
 straight forward to read. Reading the `egui-aesthetix` source code and the dashboard code
 should give you more than enough information and context to use it in your own applications
 as well as implement your own custom themes using the `Aesthetix` trait. **Happy Theming!!**

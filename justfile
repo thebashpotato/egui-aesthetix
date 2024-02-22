@@ -1,18 +1,26 @@
-format:
-  @cargo fmt
 
+# Format all files
+fmt:
+  @cargo fmt --all
+
+# Lint with clippy
 lint:
   @cargo clippy --all-targets --all-features -- -D warnings
 
+# Clean the project
 clean:
   @cargo clean
 
+# Builds a debug version
 build-debug:
   @cargo build
 
+# Builds a release version
 build-release:
   @cargo build --release
 
-dev: format lint build-debug
+# Formats, lints and builds debug
+dev: fmt lint build-debug
 
-release: format lint build-release
+# Formats, lints and builds release
+release: fmt lint build-release

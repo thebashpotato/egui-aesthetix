@@ -6,78 +6,16 @@
 //! It also gives defaults for more niche elements of the style that a user might not want to customize
 //! but can if they want to.
 
-// clippy WARN level lints
-#![warn(
-    missing_docs,
-    clippy::pedantic,
-    clippy::nursery,
-    clippy::dbg_macro,
-    clippy::unwrap_used,
-    clippy::integer_division,
-    clippy::large_include_file,
-    clippy::map_err_ignore,
-    clippy::missing_docs_in_private_items,
-    clippy::panic,
-    clippy::todo,
-    clippy::undocumented_unsafe_blocks,
-    clippy::unimplemented,
-    clippy::unreachable
-)]
-// clippy WARN level lints, that can be upgraded to DENY if preferred
-#![warn(
-    clippy::float_arithmetic,
-    clippy::modulo_arithmetic,
-    clippy::as_conversions,
-    clippy::assertions_on_result_states,
-    clippy::clone_on_ref_ptr,
-    clippy::create_dir,
-    clippy::default_union_representation,
-    clippy::deref_by_slicing,
-    clippy::empty_drop,
-    clippy::empty_structs_with_brackets,
-    clippy::exit,
-    clippy::filetype_is_file,
-    clippy::float_cmp_const,
-    clippy::if_then_some_else_none,
-    clippy::indexing_slicing,
-    clippy::let_underscore_must_use,
-    clippy::lossy_float_literal,
-    clippy::pattern_type_mismatch,
-    clippy::string_slice,
-    clippy::try_err
-)]
-// clippy DENY level lints, they always have a quick fix that should be preferred
-#![deny(
-    clippy::wildcard_imports,
-    clippy::multiple_inherent_impl,
-    clippy::rc_buffer,
-    clippy::rc_mutex,
-    clippy::rest_pat_in_fully_bound_structs,
-    clippy::same_name_method,
-    clippy::self_named_module_files,
-    clippy::unseparated_literal_suffix,
-    clippy::shadow_unrelated,
-    clippy::str_to_string,
-    clippy::string_add,
-    clippy::string_to_string,
-    clippy::unnecessary_self_imports,
-    clippy::unneeded_field_pattern,
-    clippy::unseparated_literal_suffix,
-    clippy::verbose_file_reads
-)]
-// clippy ALLOW level hints
-#![allow(clippy::excessive_precision, clippy::module_name_repetitions)]
-
 #[cfg(feature = "default")]
 pub mod themes;
 
 use egui::style::ScrollStyle;
 
-/// Every custom egui theme that wishes to use the egui-aesthetix crate must implement this trait.
+/// Every custom egui theme that wishes to use the egui aesthetix crate must implement this trait.
 /// Aesthetix is structured in such a way that it is easy to customize the theme to your liking.
 ///
 /// The trait is split into two parts:
-/// - The first part are the methods that have no implementation, these should just return self explanatory values.
+/// - The first part are the methods that have no implementation, these should just return self-explanatory values.
 ///
 /// - The second part are the methods that have a default implementation, they are more complex and use all the user defined methods.
 ///   the fields in these traits that don't use trait methods as values are niche and can be ignored if you don't want to customize them.
@@ -95,24 +33,24 @@ pub trait Aesthetix {
 
     /// Used for the main background color of the app.
     ///
-    /// - This value is used for egui's `panel_fill` and `window_fill` fields
+    /// - This value is used for eguis `panel_fill` and `window_fill` fields
     fn bg_primary_color_visuals(&self) -> egui::Color32;
 
     /// Something just barely different from the background color.
     ///
-    /// - This value is used for egui's `faint_bg_color` field
+    /// - This value is used for eguis `faint_bg_color` field
     fn bg_secondary_color_visuals(&self) -> egui::Color32;
 
     /// Very dark or light color (for corresponding theme). Used as the background of text edits,
     /// scroll bars and others things that needs to look different from other interactive stuff.
     ///
-    /// - This value is used for egui's `extreme_bg_color` field
+    /// - This value is used for eguis `extreme_bg_color` field
     fn bg_triage_color_visuals(&self) -> egui::Color32;
 
     /// Background color behind code-styled monospaced labels.
     /// Back up lighter than the background primary, secondary and triage colors.
     ///
-    /// - This value is used for egui's `code_bg_color` field
+    /// - This value is used for eguis `code_bg_color` field
     fn bg_auxiliary_color_visuals(&self) -> egui::Color32;
 
     /// The color for hyperlinks, and border contrasts.
@@ -121,10 +59,10 @@ pub trait Aesthetix {
     /// This is great for setting the color of text for any widget.
     ///
     /// If text color is None (default), then the text color will be the same as the foreground stroke color
-    /// and will depend on whether or not the widget is being interacted with.
+    /// and will depend on whether the widget is being interacted with.
     fn fg_primary_text_color_visuals(&self) -> Option<egui::Color32>;
 
-    /// Sucess color for text.
+    /// Success color for text.
     fn fg_success_text_color_visuals(&self) -> egui::Color32;
 
     /// Warning text color.
@@ -203,7 +141,7 @@ pub trait Aesthetix {
             tooltip_width: 600.0,
             indent_ends_with_horizontal_line: false,
             combo_height: 200.0,
-	    scroll: ScrollStyle {
+            scroll: ScrollStyle {
                 bar_width: self.scroll_bar_width_style(),
                 handle_min_length: 12.0,
                 bar_inner_margin: 4.0,
@@ -229,7 +167,7 @@ pub trait Aesthetix {
     /// `noninteractive.bg_stroke` is the outline of windows.
     /// `noninteractive.bg_fill` is the background color of windows.
     /// `noninteractive.fg_stroke` is the normal text color.
-    fn custom_noninteractve_widget_visuals(&self) -> egui::style::WidgetVisuals {
+    fn custom_noninteractive_widget_visuals(&self) -> egui::style::WidgetVisuals {
         egui::style::WidgetVisuals {
             bg_fill: self.bg_auxiliary_color_visuals(),
             weak_bg_fill: self.bg_auxiliary_color_visuals(),
@@ -355,8 +293,8 @@ pub trait Aesthetix {
     }
 
     /// Edit text styles.
-    /// This is literally just a copy and pasted version of egui's `default_text_styles` function.
-    fn custom_text_sytles(&self) -> std::collections::BTreeMap<egui::TextStyle, egui::FontId> {
+    /// This is literally just a copy and pasted version of eguis `default_text_styles` function.
+    fn custom_text_styles(&self) -> std::collections::BTreeMap<egui::TextStyle, egui::FontId> {
         use egui::FontFamily::{Monospace, Proportional};
         [
             (
@@ -393,7 +331,7 @@ pub trait Aesthetix {
             override_font_id: None,
 
             // set your text styles here:
-            text_styles: self.custom_text_sytles(),
+            text_styles: self.custom_text_styles(),
 
             // set your drag value text style:
             // drag_value_text_style: egui::TextStyle,
@@ -404,7 +342,7 @@ pub trait Aesthetix {
                 dark_mode: self.dark_mode_visuals(),
                 //override_text_color: self.fg_primary_text_color_visuals(),
                 widgets: egui::style::Widgets {
-                    noninteractive: self.custom_noninteractve_widget_visuals(),
+                    noninteractive: self.custom_noninteractive_widget_visuals(),
                     inactive: self.widget_inactive_visual(),
                     hovered: self.widget_hovered_visual(),
                     active: self.custom_active_widget_visual(),
@@ -453,7 +391,7 @@ pub trait Aesthetix {
                 slider_trailing_fill: true,
                 ..Default::default()
             },
-            animation_time: 0.0833_3333_5816_8602,
+            animation_time: 0.083_333_336,
             explanation_tooltips: true,
             ..Default::default()
         }
@@ -466,7 +404,7 @@ impl std::fmt::Debug for dyn Aesthetix {
     }
 }
 
-impl std::cmp::PartialEq for dyn Aesthetix {
+impl PartialEq for dyn Aesthetix {
     fn eq(&self, other: &Self) -> bool {
         self.name() == other.name()
     }

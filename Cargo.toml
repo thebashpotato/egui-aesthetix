@@ -1,6 +1,6 @@
 [package]
 name = "egui-aesthetix"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["Matt Williams <matt.k.williams@protonmail.com>"]
 description = "A Uniform and programmatic approach to theming Egui applications"
 edition = "2021"
@@ -31,6 +31,87 @@ strip = true        # Automatically strip symbols from the binary.
 opt-level = "z"     # Optimize for size.
 lto = true          # optimize at the linking stage
 panic = "abort"     # don't unwind the stack on panic
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+# Deny rules
+all = "deny"
+perf = "deny"
+correctness = "deny"
+complexity = "deny"
+style = "deny"
+pedantic = "deny"
+as_underscore = "deny"
+assertions_on_result_states = "deny"
+clone_on_ref_ptr = "deny"
+create_dir = "deny"
+dbg_macro = "deny"
+decimal_literal_representation = "deny"
+default_numeric_fallback = "deny"
+empty_drop = "deny"
+empty_structs_with_brackets = "deny"
+exit = "deny"
+filetype_is_file = "deny"
+float_cmp_const = "deny"
+fn_to_numeric_cast_any = "deny"
+format_push_string = "deny"
+get_unwrap = "deny"
+integer_division = "deny"
+lossy_float_literal = "deny"
+mem_forget = "deny"
+mixed_read_write_in_expression = "deny"
+mutex_atomic = "deny"
+needless_raw_strings = "deny"
+non_ascii_literal = "deny"
+panic = "deny"
+print_stderr = "deny"
+pub_without_shorthand = "deny"
+rc_buffer = "deny"
+rc_mutex = "deny"
+redundant_type_annotations = "deny"
+ref_patterns = "deny"
+rest_pat_in_fully_bound_structs = "deny"
+same_name_method = "deny"
+string_add = "deny"
+string_lit_chars_any = "deny"
+string_slice = "deny"
+string_to_string = "deny"
+suspicious_xor_used_as_pow = "deny"
+todo = "deny"
+try_err = "deny"
+unimplemented = "deny"
+unnecessary_self_imports = "deny"
+unneeded_field_pattern = "deny"
+unseparated_literal_suffix = "deny"
+if_then_some_else_none = "deny"
+use_debug = "deny"
+unwrap_used = "deny"
+unwrap_in_result = "deny"
+struct_excessive_bools = "deny"
+
+# Warning rules
+missing_errors_doc = { level = "warn", priority = 1 }
+missing_panics_doc = { level = "warn", priority = 1 }
+missing_docs_in_private_items = { level = "warn", priority = 1 }
+needless_bool = { level = "warn", priority = 1 }
+
+# Allow Rules
+mod_module_files = "allow"
+self_named_module_files = "allow"
+used_underscore_binding = { level = "allow", priority = 1 }
+must_use_candidate = { level = "allow", priority = 1 }
+module_name_repetitions = { level = "allow", priority = 1 }
+too_many_lines = { level = "allow", priority = 1 }
+implicit_hasher = { level = "allow", priority = 1 }
+if_not_else = { level = "allow", priority = 1 }
+return_self_not_must_use = { level = "allow", priority = 1 }
+inconsistent_struct_constructor = { level = "allow", priority = 1 }
+match_wildcard_for_single_variants = { level = "allow", priority = 1 }
+unnested_or_patterns = { level = "allow", priority = 1 }
+similar_names = { level = "allow", priority = 1 }
+struct_field_names = { level = "allow", priority = 1 }
 
 [profile.bench]
 codegen-units = 1
