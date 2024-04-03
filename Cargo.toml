@@ -18,7 +18,7 @@ standard = []
 carl = []
 
 [dependencies]
-egui = "0.26.2"
+egui = "0.27.2"
 
 [lib]
 name = "egui_aesthetix"
