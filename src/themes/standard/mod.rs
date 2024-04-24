@@ -6,8 +6,5 @@
 //! structs are good examples on how to implement a theme you want using the
 //! [`egui_aesthetix::Aesthetix`] trait.
 
-mod dark;
-mod light;
-
-pub use dark::StandardDark;
-pub use light::StandardLight;
+pub mod dark;
+pub mod light;

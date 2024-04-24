@@ -42,13 +42,13 @@ I like this method because it is trait based, so many themes could be added to t
 1. Carl Dark
     - Based off of the [Kde plasma theme](https://store.kde.org/p/1338881/)
 
-2. Gruvbox (Light and Dark)
-    - TODO
+2. Nord (Light and Dark)
+    - Based off the [ popular Nord theme](https://www.nordtheme.com/)
 
-3. Nord (Light and Dark)
-    - TODO
+3. Tokyo Night (Dark and Storm)
+    - Based off  the [VSCode Extension](https://github.com/enkia/tokyo-night-vscode-theme)
 
-4. Catppuccin (All versions)
+4. Catpuccin
     - TODO
 
 ### Checkout the results
@@ -66,6 +66,14 @@ I like this method because it is trait based, so many themes could be added to t
     <br>
     <h3>Carl Dark theme Kde on Plasma</h3>
     <img alt="Standard Light" src="./assets/carl_dark.png">
+    <h3>Nord Dark</h3>
+    <img alt="Nord Dark" src="./assets/nord_dark.png">
+    <h3>Nord Light</h3>
+    <img alt="Nord Light" src="./assets/nord_light.png">
+    <h3>Tokyo Night</h3>
+    <img alt="Tokyo Night" src="./assets/tokyo_night.png">
+    <h3>Tokyo Night Sorm</h3>
+    <img alt="Tokyo Night Storm" src="./assets/tokyo_night_storm.png">
 </div>
 </details>
 
@@ -77,25 +85,37 @@ The library is very flexible and doesn't force you to include themes you don't w
 > the StandardDark and StandardLight themes
 
 ```toml
-egui-aesthetix = "0.2.2"
+egui-aesthetix = "0.2.3"
 ```
 
 > Only includes the Aesthetix trait, no themes will be included
 
 ```toml
-egui-aesthetix = { version = "0.2.2", default-features = false }
+egui-aesthetix = { version = "0.2.3", default-features = false }
 ```
 
 > Include all the themes
 
 ```toml
-egui-aesthetix = { version = "0.2.2", features = ["all_themes"] }
+egui-aesthetix = { version = "0.2.3", features = ["all_themes"] }
 ```
 
 > Only include standard themes and a specified theme (here carl is used as the specified theme)
 
 ```toml
-egui-aesthetix = { version = "0.2.2", features = ["standard", "carl" ] }
+egui-aesthetix = { version = "0.2.3", features = ["standard", "carl" ] }
+```
+
+> Only include nord themes
+
+```toml
+egui-aesthetix = { version = "0.2.3", features = ["nord"] }
+```
+
+> Only include tokyo night themes
+
+```toml
+egui-aesthetix = { version = "0.2.3", features = ["tokyo_night"] }
 ```
 
 ## Usage

@@ -4,12 +4,19 @@
 mod carl;
 mod nord;
 mod standard;
+mod tokyo_night;
 
 #[cfg(feature = "carl")]
-pub use carl::CarlDark;
+pub use carl::dark::CarlDark;
 
 #[cfg(feature = "nord")]
-pub use nord::{NordDark, NordLight};
+pub use nord::dark::NordDark;
+pub use nord::light::NordLight;
+
+#[cfg(feature = "tokyo_night")]
+pub use tokyo_night::dark::TokyoNight;
+pub use tokyo_night::storm::TokyoNightStorm;
 
 #[cfg(feature = "standard")]
-pub use standard::{StandardDark, StandardLight};
+pub use standard::dark::StandardDark;
+pub use standard::light::StandardLight;
