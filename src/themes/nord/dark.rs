@@ -1,58 +1,59 @@
-//! A port of the Carl dark theme from Kde plasma.
-//! <https://store.kde.org/p/1338881/>
+//! Nord Light theme
+//! <https://www.nordtheme.com/>
 
 use crate::Aesthetix;
 
-/// A very dark theme with blueish accents
-pub struct CarlDark;
+/// Dark theme, with rounded buttons, and ample margin. Adapted from the Nord light
+/// color scheme.
+pub struct NordDark;
 
-impl Aesthetix for CarlDark {
+impl Aesthetix for NordDark {
     fn name(&self) -> &str {
-        "Carl Dark"
+        "Nord Dark"
     }
 
     fn primary_accent_color_visuals(&self) -> egui::Color32 {
-        egui::Color32::from_rgb(135, 169, 241)
+        egui::Color32::from_rgb(94, 129, 172)
     }
 
     fn secondary_accent_color_visuals(&self) -> egui::Color32 {
-        egui::Color32::from_rgb(56, 114, 238)
+        egui::Color32::from_rgb(129, 161, 193)
     }
 
     fn bg_primary_color_visuals(&self) -> egui::Color32 {
-        egui::Color32::from_rgb(12, 12, 15)
+        egui::Color32::from_rgb(46, 52, 64)
     }
 
     fn bg_secondary_color_visuals(&self) -> egui::Color32 {
-        egui::Color32::from_rgb(17, 18, 22)
+        egui::Color32::from_rgb(59, 66, 82)
     }
 
     fn bg_triage_color_visuals(&self) -> egui::Color32 {
-        egui::Color32::from_rgb(25, 27, 33)
+        egui::Color32::from_rgb(59, 66, 82)
     }
 
     fn bg_auxiliary_color_visuals(&self) -> egui::Color32 {
-        egui::Color32::from_rgb(72, 72, 72)
+        egui::Color32::from_rgb(59, 66, 82)
     }
 
     fn bg_contrast_color_visuals(&self) -> egui::Color32 {
-        egui::Color32::from_rgb(109, 109, 109)
+        egui::Color32::from_rgb(59, 66, 82)
     }
 
     fn fg_primary_text_color_visuals(&self) -> Option<egui::Color32> {
-        Some(egui::Color32::from_rgb(207, 216, 220))
+        Some(egui::Color32::from_rgb(216, 222, 233))
     }
 
     fn fg_success_text_color_visuals(&self) -> egui::Color32 {
-        egui::Color32::from_rgb(42, 172, 170)
+        egui::Color32::from_rgb(80, 250, 123)
     }
 
     fn fg_warn_text_color_visuals(&self) -> egui::Color32 {
-        egui::Color32::from_rgb(191, 54, 198)
+        egui::Color32::from_rgb(255, 215, 64)
     }
 
     fn fg_error_text_color_visuals(&self) -> egui::Color32 {
-        egui::Color32::from_rgb(255, 55, 102)
+        egui::Color32::from_rgb(255, 121, 121)
     }
 
     fn dark_mode_visuals(&self) -> bool {

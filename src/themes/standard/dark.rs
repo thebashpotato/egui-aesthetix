@@ -3,7 +3,8 @@
 
 use crate::Aesthetix;
 
-/// A Standard dark theme, with rounded buttons, and ample margin.
+/// A Standard dark theme, with rounded buttons, and ample margin. Adapted from the Gnome dark
+/// color scheme.
 pub struct StandardDark;
 
 impl Aesthetix for StandardDark {
@@ -60,22 +61,22 @@ impl Aesthetix for StandardDark {
     }
 
     fn margin_style(&self) -> f32 {
-        10.0
-    }
-
-    fn button_padding(&self) -> egui::Vec2 {
-        egui::Vec2 { x: 10.0, y: 8.0 }
-    }
-
-    fn item_spacing_style(&self) -> f32 {
-        15.0
-    }
-
-    fn scroll_bar_width_style(&self) -> f32 {
         12.0
     }
 
+    fn button_padding(&self) -> egui::Vec2 {
+        egui::Vec2 { x: 12.0, y: 10.0 }
+    }
+
+    fn item_spacing_style(&self) -> f32 {
+        18.0
+    }
+
+    fn scroll_bar_width_style(&self) -> f32 {
+        14.0
+    }
+
     fn rounding_visuals(&self) -> f32 {
-        8.0
+        6.0
     }
 }
