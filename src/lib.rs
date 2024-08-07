@@ -9,8 +9,6 @@
 #[cfg(feature = "default")]
 pub mod themes;
 
-use egui::style::ScrollStyle;
-
 /// Every custom egui theme that wishes to use the egui aesthetix crate must implement this trait.
 /// Aesthetix is structured in such a way that it is easy to customize the theme to your liking.
 ///
@@ -141,7 +139,7 @@ pub trait Aesthetix {
             tooltip_width: 600.0,
             indent_ends_with_horizontal_line: false,
             combo_height: 200.0,
-            scroll: ScrollStyle {
+            scroll: egui::style::ScrollStyle {
                 bar_width: self.scroll_bar_width_style(),
                 handle_min_length: 12.0,
                 bar_inner_margin: 4.0,
@@ -334,13 +332,12 @@ pub trait Aesthetix {
             text_styles: self.custom_text_styles(),
 
             // set your drag value text style:
-            // drag_value_text_style: egui::TextStyle,
             spacing: self.spacing_style(),
             interaction: self.interaction_style(),
 
             visuals: egui::Visuals {
                 dark_mode: self.dark_mode_visuals(),
-                //override_text_color: self.fg_primary_text_color_visuals(),
+                override_text_color: self.fg_primary_text_color_visuals(),
                 widgets: egui::style::Widgets {
                     noninteractive: self.custom_noninteractive_widget_visuals(),
                     inactive: self.widget_inactive_visual(),
@@ -384,7 +381,6 @@ pub trait Aesthetix {
                     ..Default::default()
                 },
                 resize_corner_size: 12.0,
-                text_cursor_preview: false,
                 clip_rect_margin: 3.0,
                 button_frame: true,
                 collapsing_header_frame: true,

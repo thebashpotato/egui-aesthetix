@@ -20,7 +20,7 @@ nord = []
 tokyo_night = []
 
 [dependencies]
-egui = "0.27"
+egui = "0.28"
 
 [lib]
 name = "egui_aesthetix"
@@ -43,12 +43,11 @@ unsafe_code = "forbid"
 
 [lints.clippy]
 # Deny rules
-all = "deny"
-perf = "deny"
-correctness = "deny"
-complexity = "deny"
-style = "deny"
-pedantic = "deny"
+perf = { level = "deny", priority = -1 }
+style = { level = "deny", priority = -1 }
+pedantic = { level = "deny", priority = -1 }
+correctness = { level = "deny", priority = -1 }
+complexity = { level = "deny", priority = -1 }
 as_underscore = "deny"
 assertions_on_result_states = "deny"
 clone_on_ref_ptr = "deny"
