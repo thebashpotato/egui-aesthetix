@@ -85,37 +85,37 @@ The library is very flexible and doesn't force you to include themes you don't w
 > the StandardDark and StandardLight themes
 
 ```toml
-egui-aesthetix = "0.2.3"
+egui-aesthetix = "0.2.4"
 ```
 
 > Only includes the Aesthetix trait, no themes will be included
 
 ```toml
-egui-aesthetix = { version = "0.2.3", default-features = false }
+egui-aesthetix = { version = "0.2.4", default-features = false }
 ```
 
 > Include all the themes
 
 ```toml
-egui-aesthetix = { version = "0.2.3", features = ["all_themes"] }
+egui-aesthetix = { version = "0.2.4", features = ["all_themes"] }
 ```
 
 > Only include standard themes and a specified theme (here carl is used as the specified theme)
 
 ```toml
-egui-aesthetix = { version = "0.2.3", features = ["standard", "carl" ] }
+egui-aesthetix = { version = "0.2.4", features = ["standard", "carl" ] }
 ```
 
 > Only include nord themes
 
 ```toml
-egui-aesthetix = { version = "0.2.3", features = ["nord"] }
+egui-aesthetix = { version = "0.2.4", features = ["nord"] }
 ```
 
 > Only include tokyo night themes
 
 ```toml
-egui-aesthetix = { version = "0.2.3", features = ["tokyo_night"] }
+egui-aesthetix = { version = "0.2.4", features = ["tokyo_night"] }
 ```
 
 ## Usage
