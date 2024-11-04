@@ -3,5 +3,5 @@
 mod dark;
 mod light;
 
-pub use dark::*;
-pub use light::*;
+pub use dark::NordDark;
+pub use light::NordLight;

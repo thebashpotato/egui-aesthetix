@@ -91,7 +91,7 @@ egui-aesthetix = "0.2.4"
 > Only includes the Aesthetix trait, no themes will be included
 
 ```toml
-egui-aesthetix = { version = "0.2.4", default-features = false }
+egui-aesthetix = { version = "0.2.4"}
 ```
 
 > Include all the themes

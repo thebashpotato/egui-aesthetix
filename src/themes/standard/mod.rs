@@ -9,5 +9,5 @@
 mod dark;
 mod light;
 
-pub use dark::*;
-pub use light::*;
+pub use dark::StandardDark;
+pub use light::StandardLight;

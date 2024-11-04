@@ -11,13 +11,13 @@ lint:
 clean:
   @cargo clean
 
-# Builds a debug version
+# Builds a debug version with all features (themes turned on)
 build-debug:
-  @cargo build --all-features
+  @cargo build --features "all_themes"
 
 # Builds a release version
 build-release:
-  @cargo build  --all-features --release
+  @cargo build  --features "all_themes" --release
 
 # Publish crate on dry run
 publish:

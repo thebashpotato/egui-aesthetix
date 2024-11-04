@@ -3,5 +3,5 @@
 mod dark;
 mod storm;
 
-pub use dark::*;
-pub use storm::*;
+pub use dark::TokyoNight;
+pub use storm::TokyoNightStorm;

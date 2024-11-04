@@ -12,12 +12,11 @@ categories = ["gui"]
 license-file = "LICENSE"
 
 [features]
-default = ["standard"]
-all_themes = ["standard", "carl", "nord", "tokyo_night"]
-standard = []
 carl = []
 nord = []
+standard = []
 tokyo_night = []
+all_themes = ["standard", "carl", "nord", "tokyo_night"]
 
 [dependencies]
 egui = "0.33.3"

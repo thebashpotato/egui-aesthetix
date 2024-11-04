@@ -2,4 +2,4 @@
 
 mod dark;
 
-pub use dark::*;
+pub use dark::CarlDark;
