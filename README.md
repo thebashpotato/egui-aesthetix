@@ -81,17 +81,10 @@ I like this method because it is trait based, so many themes could be added to t
 
 The library is very flexible and doesn't force you to include themes you don't want.
 
-> This includes default features which is the Aesthetix trait, and
-> the StandardDark and StandardLight themes
-
-```toml
-egui-aesthetix = "0.2.4"
-```
-
 > Only includes the Aesthetix trait, no themes will be included
 
 ```toml
-egui-aesthetix = { version = "0.2.4"}
+egui-aesthetix = "0.2.4"
 ```
 
 > Include all the themes
