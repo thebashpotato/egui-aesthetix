@@ -12,15 +12,14 @@ categories = ["gui"]
 license-file = "LICENSE"
 
 [features]
-default = ["standard"]
-all_themes = ["standard", "carl", "nord", "tokyo_night"]
-standard = []
 carl = []
 nord = []
+standard = []
 tokyo_night = []
+all_themes = ["standard", "carl", "nord", "tokyo_night"]
 
 [dependencies]
-egui = "0.28"
+egui = "0.29.1"
 
 [lib]
 name = "egui_aesthetix"

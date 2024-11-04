@@ -6,7 +6,6 @@
 //! It also gives defaults for more niche elements of the style that a user might not want to customize
 //! but can if they want to.
 
-#[cfg(feature = "default")]
 pub mod themes;
 
 /// Every custom egui theme that wishes to use the egui aesthetix crate must implement this trait.

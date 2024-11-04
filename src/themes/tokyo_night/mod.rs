@@ -1,4 +1,7 @@
 //! Tokyo night dark, storm, and light themes,
 
-pub mod dark;
-pub mod storm;
+mod dark;
+mod storm;
+
+pub use dark::TokyoNight;
+pub use storm::TokyoNightStorm;
