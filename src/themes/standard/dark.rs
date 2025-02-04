@@ -8,7 +8,7 @@ use crate::Aesthetix;
 pub struct StandardDark;
 
 impl Aesthetix for StandardDark {
-    fn name(&self) -> &str {
+    fn name(&self) -> &'static str {
         "Standard Dark"
     }
 
@@ -60,8 +60,8 @@ impl Aesthetix for StandardDark {
         true
     }
 
-    fn margin_style(&self) -> f32 {
-        12.0
+    fn margin_style(&self) -> i8 {
+        12
     }
 
     fn button_padding(&self) -> egui::Vec2 {
@@ -76,7 +76,7 @@ impl Aesthetix for StandardDark {
         14.0
     }
 
-    fn rounding_visuals(&self) -> f32 {
-        6.0
+    fn rounding_visuals(&self) -> u8 {
+        6
     }
 }
