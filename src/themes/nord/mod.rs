@@ -1,4 +1,7 @@
 //! Nord Dark and Light themes
 
-pub mod dark;
-pub mod light;
+mod dark;
+mod light;
+
+pub use dark::*;
+pub use light::*;

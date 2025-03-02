@@ -1,22 +1,22 @@
-//! All themes that the Aesthetix ships without of the box will
+//! All themes that the Aesthetix ships out of the box will
 //! be located in this folder
 
-mod carl;
-mod nord;
-mod standard;
-mod tokyo_night;
-
 #[cfg(feature = "carl")]
-pub use carl::dark::CarlDark;
+mod carl;
+#[cfg(feature = "carl")]
+pub use carl::*;
 
 #[cfg(feature = "nord")]
-pub use nord::dark::NordDark;
-pub use nord::light::NordLight;
+mod nord;
+#[cfg(feature = "nord")]
+pub use nord::*;
 
 #[cfg(feature = "tokyo_night")]
-pub use tokyo_night::dark::TokyoNight;
-pub use tokyo_night::storm::TokyoNightStorm;
+mod tokyo_night;
+#[cfg(feature = "tokyo_night")]
+pub use tokyo_night::*;
 
 #[cfg(feature = "standard")]
-pub use standard::dark::StandardDark;
-pub use standard::light::StandardLight;
+mod standard;
+#[cfg(feature = "standard")]
+pub use standard::*;
