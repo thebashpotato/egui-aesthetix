@@ -78,7 +78,7 @@ pub trait Aesthetix {
     /// Using the same value will yield a more consistent look.
     ///
     /// - Egui default is 6.0
-    fn margin_style(&self) -> f32;
+    fn margin_style(&self) -> i8;
 
     /// Button size is text size plus this on each side.
     ///
@@ -100,7 +100,7 @@ pub trait Aesthetix {
     /// Custom rounding value for all buttons and frames.
     ///
     /// - Egui default is 4.0
-    fn rounding_visuals(&self) -> f32;
+    fn rounding_visuals(&self) -> u8;
 
     /// Controls the sizes and distances between widgets.
     /// The following types of spacing are implemented.
@@ -173,7 +173,7 @@ pub trait Aesthetix {
                 width: 1.0,
                 color: self.bg_auxiliary_color_visuals(),
             },
-            rounding: egui::Rounding {
+            corner_radius: egui::CornerRadius {
                 nw: self.rounding_visuals(),
                 ne: self.rounding_visuals(),
                 sw: self.rounding_visuals(),
@@ -196,7 +196,7 @@ pub trait Aesthetix {
                 width: 0.0,
                 color: egui::Color32::from_rgba_premultiplied(0, 0, 0, 0),
             },
-            rounding: egui::Rounding {
+            corner_radius: egui::CornerRadius {
                 nw: self.rounding_visuals(),
                 ne: self.rounding_visuals(),
                 sw: self.rounding_visuals(),
@@ -219,7 +219,7 @@ pub trait Aesthetix {
                 width: 1.0,
                 color: self.bg_triage_color_visuals(),
             },
-            rounding: egui::Rounding {
+            corner_radius: egui::CornerRadius {
                 nw: self.rounding_visuals(),
                 ne: self.rounding_visuals(),
                 sw: self.rounding_visuals(),
@@ -242,7 +242,7 @@ pub trait Aesthetix {
                 width: 1.0,
                 color: self.bg_primary_color_visuals(),
             },
-            rounding: egui::Rounding {
+            corner_radius: egui::CornerRadius {
                 nw: self.rounding_visuals(),
                 ne: self.rounding_visuals(),
                 sw: self.rounding_visuals(),
@@ -265,7 +265,7 @@ pub trait Aesthetix {
                 width: 1.0,
                 color: self.bg_triage_color_visuals(),
             },
-            rounding: egui::Rounding {
+            corner_radius: egui::CornerRadius {
                 nw: self.rounding_visuals(),
                 ne: self.rounding_visuals(),
                 sw: self.rounding_visuals(),
@@ -353,14 +353,14 @@ pub trait Aesthetix {
                 code_bg_color: self.bg_auxiliary_color_visuals(),
                 warn_fg_color: self.fg_warn_text_color_visuals(),
                 error_fg_color: self.fg_error_text_color_visuals(),
-                window_rounding: egui::Rounding {
+                window_corner_radius: egui::CornerRadius {
                     nw: self.rounding_visuals(),
                     ne: self.rounding_visuals(),
                     sw: self.rounding_visuals(),
                     se: self.rounding_visuals(),
                 },
                 window_shadow: egui::epaint::Shadow {
-                    spread: 32.0,
+                    spread: 32,
                     color: egui::Color32::from_rgba_premultiplied(0, 0, 0, 96),
                     ..Default::default()
                 },
@@ -369,14 +369,14 @@ pub trait Aesthetix {
                     width: 1.0,
                     color: self.bg_contrast_color_visuals(),
                 },
-                menu_rounding: egui::Rounding {
+                menu_corner_radius: egui::CornerRadius {
                     nw: self.rounding_visuals(),
                     ne: self.rounding_visuals(),
                     sw: self.rounding_visuals(),
                     se: self.rounding_visuals(),
                 },
                 popup_shadow: egui::epaint::Shadow {
-                    spread: 16.0,
+                    spread: 16,
                     color: egui::Color32::from_rgba_premultiplied(19, 18, 18, 96),
                     ..Default::default()
                 },
