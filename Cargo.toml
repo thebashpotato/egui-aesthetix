@@ -20,7 +20,7 @@ nord = []
 tokyo_night = []
 
 [dependencies]
-egui = "0.31"
+egui = "0.32"
 
 [lib]
 name = "egui_aesthetix"
