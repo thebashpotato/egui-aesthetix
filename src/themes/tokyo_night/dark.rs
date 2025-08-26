@@ -7,7 +7,7 @@ use crate::Aesthetix;
 pub struct TokyoNight;
 
 impl Aesthetix for TokyoNight {
-    fn name(&self) -> &str {
+    fn name(&self) -> &'static str {
         "Tokyo Night"
     }
 

@@ -1,3 +1,5 @@
+#![cfg_attr(docsrs, feature(doc_auto_cfg))]
+
 //! A programmatic and Uniform approach to theming egui Applications.
 //!
 //! This library supplies one simple theme trait which attempts to expose all the key colors, margins, paddings, spacings
@@ -6,7 +8,6 @@
 //! It also gives defaults for more niche elements of the style that a user might not want to customize
 //! but can if they want to.
 
-#[cfg(feature = "default")]
 pub mod themes;
 
 /// Every custom egui theme that wishes to use the egui aesthetix crate must implement this trait.

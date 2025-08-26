@@ -8,7 +8,7 @@ use crate::Aesthetix;
 pub struct NordLight;
 
 impl Aesthetix for NordLight {
-    fn name(&self) -> &str {
+    fn name(&self) -> &'static str {
         "Nord Light"
     }
 
