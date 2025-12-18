@@ -3,7 +3,7 @@ name = "egui-aesthetix"
 version = "0.2.4"
 authors = ["Matt Williams <matt.k.williams@protonmail.com>"]
 description = "A Uniform and programmatic approach to theming Egui applications"
-edition = "2021"
+edition = "2024"
 homepage = "https://github.com/thebashpotato/egui-aesthetix"
 repository = "https://github.com/thebashpotato/egui-aesthetix"
 documentation = "https://docs.rs/egui-aesthetix/"
@@ -20,7 +20,7 @@ nord = []
 tokyo_night = []
 
 [dependencies]
-egui = "0.31"
+egui = "0.33.3"
 
 [lib]
 name = "egui_aesthetix"
