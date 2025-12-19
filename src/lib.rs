@@ -338,7 +338,7 @@ pub trait Aesthetix {
 
             visuals: egui::Visuals {
                 dark_mode: self.dark_mode_visuals(),
-                override_text_color: self.fg_primary_text_color_visuals(),
+                override_text_color: None,
                 widgets: egui::style::Widgets {
                     noninteractive: self.custom_noninteractive_widget_visuals(),
                     inactive: self.widget_inactive_visual(),
