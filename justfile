@@ -1,23 +1,22 @@
-
 # Format all files
 fmt:
-  @cargo fmt --all
+    @cargo fmt --all
 
 # Lint with clippy
 lint:
-  @cargo clippy --all-targets --all-features -- -D warnings
+    @cargo clippy --all-targets --all-features -- -D warnings
 
 # Clean the project
 clean:
-  @cargo clean
+    @cargo clean
 
 # Builds a debug version with all features (themes turned on)
 build-debug:
-  @cargo build --features "all_themes"
+    @cargo build
 
 # Builds a release version
 build-release:
-  @cargo build  --features "all_themes" --release
+    @cargo build --release
 
 # Publish crate on dry run
 publish:
@@ -28,4 +27,3 @@ dev: fmt lint build-debug
 
 # Formats, lints and builds release
 release: fmt lint build-release
-

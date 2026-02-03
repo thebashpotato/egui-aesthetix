@@ -16,7 +16,7 @@ carl = []
 nord = []
 standard = []
 tokyo_night = []
-all_themes = ["standard", "carl", "nord", "tokyo_night"]
+default = ["carl", "nord", "standard", "tokyo_night"]
 
 [dependencies]
 egui = "0.33.3"
