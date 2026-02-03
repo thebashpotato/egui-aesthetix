@@ -3,7 +3,7 @@ name = "egui-aesthetix"
 version = "0.2.4"
 authors = ["Matt Williams <matt.k.williams@protonmail.com>"]
 description = "A Uniform and programmatic approach to theming Egui applications"
-edition = "2021"
+edition = "2024"
 homepage = "https://github.com/thebashpotato/egui-aesthetix"
 repository = "https://github.com/thebashpotato/egui-aesthetix"
 documentation = "https://docs.rs/egui-aesthetix/"
@@ -20,7 +20,7 @@ nord = []
 tokyo_night = []
 
 [dependencies]
-egui = "0.31"
+egui = "0.33.3"
 
 [lib]
 name = "egui_aesthetix"
@@ -63,6 +63,7 @@ float_cmp_const = "deny"
 fn_to_numeric_cast_any = "deny"
 format_push_string = "deny"
 get_unwrap = "deny"
+implicit_clone = "deny"
 integer_division = "deny"
 lossy_float_literal = "deny"
 mem_forget = "deny"
@@ -82,7 +83,6 @@ same_name_method = "deny"
 string_add = "deny"
 string_lit_chars_any = "deny"
 string_slice = "deny"
-string_to_string = "deny"
 suspicious_xor_used_as_pow = "deny"
 todo = "deny"
 try_err = "deny"
