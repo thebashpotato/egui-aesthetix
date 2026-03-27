@@ -19,7 +19,7 @@ tokyo_night = []
 all_themes = ["standard", "carl", "nord", "tokyo_night"]
 
 [dependencies]
-egui = "0.33.3"
+egui = "0.34.1"
 
 [lib]
 name = "egui_aesthetix"
